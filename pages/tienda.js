@@ -1,11 +1,9 @@
-import Link from "next/link"
-import Chemas from "../components/listado-chemas"
+import Chema from "../components/chema"
 import Layout from "../components/layout"
-import styles from  "../styles/chemas.module.css"
+import styles from  "../styles/grid.module.css"
 
 
 export default function Tienda({chemas}) {
-  console.log(chemas);
   
   return (
     <Layout
@@ -13,11 +11,17 @@ export default function Tienda({chemas}) {
       description="Tienda virtual, venta de camisetas, sueters, chemas"
     >
 
-<main className="contenedor">
-            <h1 className="heading">Nuestra Colección</h1>
-                  <Chemas
-             
-                  />
+          <main className="contenedor">
+            <h1 className="heading">Mi Colección</h1>
+
+           <div className={styles.grid}>
+               {chemas?.map(chema => (
+                <Chema 
+                key={chema.id}
+                chema = {chema.attributes}
+                />
+               ))}
+           </div>
         </main>
     </Layout>
   )
@@ -25,7 +29,7 @@ export default function Tienda({chemas}) {
 
 
 export async function getServerSideProps() {
-    const respuesta =  await fetch(`${process.env.API_URL}/posts?populate=imagen`);
+    const respuesta =  await fetch(`${process.env.API_URL}/chemas?populate=imagen`);
     const {data: chemas} = await respuesta.json() 
     return {
       props: {

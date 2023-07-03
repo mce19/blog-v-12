@@ -1,4 +1,4 @@
-import Image from 'next/future/image'
+import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import styles from '../styles/header.module.css'
@@ -51,6 +51,13 @@ export default function Header() {
                      </a>
                      
                     </Link>
+
+                    <Link href="/carrito">
+                        <a>
+                           <Image width={30} height={25} src="/img/carrito.png" alt="imagen carrito" />
+                        </a>
+                    </Link>
+
           
                 
                 </nav>

@@ -1,8 +1,10 @@
 :root {
-  --primary: #e99401;
+  /* --primary: #d6a34b; */
+  --primary: #72EB3A;
   --black: #262626;
-  --white: #FFF;
+  --white: #ffffff;
   --fuente-principal: 'Outfit', sans-serif;
+  --boton: #5c7c91;
 }
 html {
   font-size: 62.5%;
@@ -17,6 +19,7 @@ body {
   font-size: 2rem;
   font-family: var(--fuente-principal);
   line-height: 1.5;
+  background-color: #26292B;
 }
 img {
   max-width: 100%;
@@ -36,9 +39,10 @@ main {
 }
 .error,
 .error-enlace {
-  font-size: 2.4rem;
+  font-size: 2.6rem;
   text-align: center;
-  margin-top: 5rem;
+  margin-top: 6rem;
+  color: #fff;
 }
 .error-enlace {
   font-size: 1.8rem;

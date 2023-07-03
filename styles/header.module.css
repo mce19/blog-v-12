@@ -1,6 +1,6 @@
 .header {
     background-image: linear-gradient(to right, rgb(0 0 0 / .8), rgb(0 0 0 / .7)), url(../public/img/header.jpg);
-    padding: 5rem 0;
+    padding: 15rem 0;
     background-position: center;
     background-size: cover;
 }
@@ -20,6 +20,7 @@
 .navegacion {
     margin-top: 5rem;
     display: flex;
+    align-items: center;
     gap: 2rem;
 }
 @media (min-width: 768px) {
